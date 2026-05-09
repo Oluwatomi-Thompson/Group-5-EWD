@@ -1,3 +1,13 @@
-# Group-5-EWD
-Welcome to our collaborative web development project 
-We are a team of passionate developers building scalable, user‑friendly, and innovative digital solutions. This repository serves as the foundation for our group projects.
+Team 5 MoMo Transactions Analyzer
+Project Description
+A full-stack application that processes Mobile Money SMS transactions, stores them in a database, and visualizes spending patterns.
+
+Team Members:
+Oke Joseph
+Nyayath Chol
+Oluwatomi Thompson
+
+Project Resources
+Trello Scrum Board: 
+Miro Diagram: 
+Team Tasksheet:
