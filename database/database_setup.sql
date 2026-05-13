@@ -47,6 +47,3 @@ CREATE TABLE Transaction_Tags (
     FOREIGN KEY (transaction_id) REFERENCES Transactions(transaction_id),
     FOREIGN KEY (tag_id) REFERENCES Tags(tag_id)
 );
-
-
-
