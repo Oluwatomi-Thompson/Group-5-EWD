@@ -1,175 +1,174 @@
 
-    [
-        {
-            "user": {
+[
+    {
+        "transaction": {
+            "transaction_id": 101,
+            "amount":50000,
+            "currency":"rwf",
+            "transaction_date": "2026-05-14T10:00:00Z",
+            "status": "completed",
+            "description": "service payment ",
+
+            "sender": {
                 "user_id": 1,
-                "full_name": "Nyayath Chol",
+                "Full_name": "Nyayath Chol",
                 "phone_number": "0795623967",
-                "created_at": "2026-05-13T10:05:00"
+                "created_at": "2026-05-14T10:00:00Z"
             },
-            "transaction_category": {
+            "receiver":{
+                "user_id":1,
+                "Full_name": "Nyalang Lual",
+                "phone_number": "0789654321",
+                "created_at": "2026-05-14T10:00:00Z",
+            },
+            
+            "category":{
                 "category_id": 1,
-                "name": "Transfer",
+                "name":"transfer",
                 "description": "Money transfer transaction"
             },
-            "transaction": {
-                "transaction_id": 101,
-                "amount": 5000.0,
-                "transaction_date": "2026-05-13T10:05:00",
-                "status": "Success",
-                "user": {
-                    "user_id": 1,
-                    "full_name": "Nyayath Chol"
+
+            "tags": [
+                {
+                    "tag_id": 1,
+                    "name": "urgent",
+                    "description": "Transactions that require immediate attention"
                 },
-                "category": {
-                    "category_id": 1,
-                    "name": "Transfer"
+                {
+                    "tag_id": 2,
+                    "name": "Mobile Money",
+                    "description": "Money transfer transaction"
+                }
+            ],
+
+            "system_logs": [
+                {
+                    "log_id": 1,
+                    "transaction_id": 101,
+                    "log_message": "Transaction created successfully",
+                    "timestamp": "2026-05-14T10:00:00Z"
                 },
-                "tags": [
-                    {
-                        "tag_id": 1,
-                        "tag_name": "urgent"
-                    },
-                    {
-                        "tag_id": 2,
-                        "tag_name": "MobileMoney"
-                    }
-                ]
-            },
-            "system_log": {
-                "log_id": 1,
-                "event_type": "Validation",
-                "description": "Transaction processed successfully",
-                "log_time": "2026-05-13T10:05:00"
-            }
-        },
-        {
-            "user": {
-                "user_id": 2,
-                "full_name": "Sarah Johnson",
-                "phone_number": "0798765432",
-                "created_at": "2026-05-14T11:00:00"
-            },
-            "transaction_category": {
-                "category_id": 2,
-                "name": "Payment",
-                "description": "Bill payment transaction"
-            },
-            "transaction": {
-                "transaction_id": 102,
-                "amount": 15000.0,
-                "transaction_date": "2026-05-14T11:00:00",
-                "status": "Pending",
-                "user": {
-                    "user_id": 2,
-                    "full_name": "Sarah Johnson"
-                },
-                "category": {
-                    "category_id": 2,
-                    "name": "Payment"
-                },
-                "tags": [
-                    {
-                        "tag_id": 3,
-                        "tag_name": "bill"
-                    },
-                    {
-                        "tag_id": 4,
-                        "tag_name": "Electricity"
-                    }
-                ]
-            },
-            "system_log": {
-                "log_id": 2,
-                "event_type": "Validation",
-                "description": "Transaction pending approval",
-                "log_time": "2026-05-14T11:00:00"
-            }
-        },
-        {
-            "user": {
-                "user_id": 3,
-                "full_name": "Thompson Lee",
-                "phone_number": "0791234567",
-                "created_at": "2026-05-15T12:00:00"
-            },
-            "transaction_category": {
-                "category_id": 3,
-                "name": "Withdrawal",
-                "description": "Cash withdrawal transaction"
-            },
-            "transaction": {
-                "transaction_id": 103,
-                "amount": 70000.0,
-                "transaction_date": "2026-05-15T12:00:00",
-                "status": "Failed",
-                "user": {
-                    "user_id": 3,
-                    "full_name": "Thompson Lee"
-                },
-                "category": {
-                    "category_id": 3,
-                    "name": "Withdrawal"
-                },
-                "tags": [
-                    {
-                        "tag_id": 5,
-                        "tag_name": "ATM"
-                    },
-                    {
-                        "tag_id": 6,
-                        "tag_name": "cash"
-                    }
-                ]
-            },
-            "system_log": {
-                "log_id": 3,
-                "event_type": "Validation",
-                "description": "Transaction failed due to insufficient funds",
-                "log_time": "2026-05-15T12:00:00"
-            }
-        },
-        {
-            "user": {
-                "user_id": 4,
-                "full_name": "Joseph Oke",
-                "phone_number": "0796543210",
-                "created_at": "2026-05-16T13:00:00"
-            },
-            "transaction_category": {
-                "category_id": 4,
-                "name": "Deposit",
-                "description": "Cash deposit transaction"
-            },
-            "transaction": {
-                "transaction_id": 104,
-                "amount": 350000.0,
-                "transaction_date": "2026-05-16T13:00:00",
-                "status": "Success",
-                "user": {
-                    "user_id": 4,
-                    "full_name": "Joseph Oke"
-                },
-                "category": {
-                    "category_id": 4,
-                    "name": "Deposit"
-                },
-                "tags": [
-                    {
-                        "tag_id": 7,
-                        "tag_name": "bank"
-                    },
-                    {
-                        "tag_id": 8,
-                        "tag_name": "cash"
-                    }
-                ]
-            },
-            "system_log": {
-                "log_id": 4,
-                "event_type": "Validation",
-                "description": "Transaction processed successfully",
-                "log_time": "2026-05-16T13:00:00"
-            }
+                {
+                    "log_id": 2,
+                    "transaction_id": 101,
+                    "log_message": "Transaction completed",
+                    "timestamp": "2026-05-14T10:05:00Z"
+                }
+            ]
         }
-    ]
+    },
+    {
+        "transaction": {
+            "transaction_id": 102,
+            "amount":75000,
+            "currency":"rwf",
+            "transaction_date": "2026-05-15T11:00:00Z",
+            "status": "pending",
+            "description": "Payment for goods purchased",
+
+            "sender": {
+                "user_id": 2,
+                "Full_name": "Thompson Oluwa",
+                "phone_number": "0789654321",
+                "created_at": "2026-05-15T11:00:00Z"
+            },
+            "receiver":{
+                "user_id":2,
+                "Full_name": "Joseph Oke",
+                "phone_number": "0795623967",
+                "created_at": "2026-05-15T11:00:00Z"
+            },
+            
+            "category":{
+                "category_id": 2,
+                "name":"payment",
+                "description": "Payment transaction"
+            },
+
+            "tags": [
+                {
+                    "tag_id": 3,
+                    "name": "high-value",
+                    "description": "Transactions with a high amount"
+                },
+                {
+                    "tag_id": 4,
+                    "name": "E-commerce",
+                    "description": "Transactions related to online shopping"
+                }
+            ],
+
+            "system_logs": [
+                {
+                    "log_id": 3,
+                    "transaction_id": 102,
+                    "log_message": "Transaction created successfully",
+                    "timestamp": "2026-05-15T11:00:00Z"
+                },
+                {
+                    "log_id": 4,
+                    "transaction_id": 102,
+                    "log_message": "Transaction pending approval",
+                    "timestamp": "2026-05-15T11:30:00Z"
+                }
+            ]
+        }
+    },
+    {
+        "transaction": {
+            "transaction_id": 103,
+            "amount":25000,
+            "currency":"rwf",
+            "transaction_date": "2026-05-16T12:00:00Z",
+            "status": "failed",
+            "description": "Subscription payment transaction",
+
+            "sender": {
+                "user_id": 3,
+                "Full_name": "Eliza Yar",
+                "phone_number": "0798765432",
+                "created_at": "2026-05-16T12:00:00Z"
+            },
+            "receiver":{
+                "user_id":3,
+                "Full_name": "Electricity Company",
+                "phone_number": "0781234567",
+                "created_at": "2026-05-16T12:00:00Z"
+            },
+            
+            "category":{
+                "category_id": 3,
+                "name":"subscription",
+                "description": "Subscription payment transaction"
+            },
+
+            "tags": [
+                {
+                    "tag_id": 5,
+                    "name": "recurring",
+                    "description": "Transactions that occur on a monthly  basis"
+                },
+                {
+                    "tag_id": 6,
+                    "name": "Service Payment",
+                    "description": "Transactions for service  payment"
+                }
+            ],
+
+            "system_logs": [
+                {
+                    "log_id": 5,
+                    "transaction_id": 103,
+                    "log_message": "Transaction created successfully",
+                    "timestamp": "2026-05-16T12:00:00Z"
+                },
+                {
+                    "log_id": 6,
+                    "transaction_id": 103,
+                    "log_message": "Transaction failed due to insufficient funds",
+                    "timestamp": "2026-05-16T12:30:00Z"
+                }
+            ]
+        }
+    }
+]
