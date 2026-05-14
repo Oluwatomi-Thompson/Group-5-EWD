@@ -11,13 +11,13 @@
 
             "sender": {
                 "user_id": 1,
-                "Full_name": "Nyayath Chol",
+                "full_name": "Nyayath Chol",
                 "phone_number": "0795623967",
                 "created_at": "2026-05-14T10:00:00Z"
             },
             "receiver":{
                 "user_id":5,
-                "Full_name": "Nyalang Lual",
+                "full_name": "Nyalang Lual",
                 "phone_number": "0789654321",
                 "created_at": "2026-05-14T10:00:00Z"
             },
@@ -68,13 +68,13 @@
 
             "sender": {
                 "user_id": 2,
-                "Full_name": "Thompson Oluwa",
+                "full_name": "Thompson Oluwa",
                 "phone_number": "0789654321",
                 "created_at": "2026-05-15T11:00:00Z"
             },
             "receiver":{
                 "user_id":6,
-                "Full_name": "Joseph Oke",
+                "full_name": "Joseph Oke",
                 "phone_number": "0795623967",
                 "created_at": "2026-05-15T11:00:00Z"
             },
@@ -125,13 +125,13 @@
 
             "sender": {
                 "user_id": 3,
-                "Full_name": "Eliza Yar",
+                "full_name": "Eliza Yar",
                 "phone_number": "0798765432",
                 "created_at": "2026-05-16T12:00:00Z"
             },
             "receiver":{
                 "user_id":7,
-                "Full_name": "Electricity Company",
+                "full_name": "Electricity Company",
                 "phone_number": "0781234567",
                 "created_at": "2026-05-16T12:00:00Z"
             },
