@@ -1,13 +1,12 @@
-
 [
     {
         "transaction": {
             "transaction_id": 101,
-            "amount":50000,
-            "currency":"RWF",
+            "amount": 50000,
+            "currency": "RWF",
             "transaction_date": "2026-05-14T10:00:00Z",
             "status": "success",
-            "description": "service payment ",
+            "description": "service payment",
 
             "sender": {
                 "user_id": 1,
@@ -15,53 +14,53 @@
                 "phone_number": "0795623967",
                 "created_at": "2026-05-14T10:00:00Z"
             },
-            "receiver":{
-                "user_id":5,
+
+            "receiver": {
+                "user_id": 5,
                 "full_name": "Nyalang Lual",
                 "phone_number": "0789654321",
                 "created_at": "2026-05-14T10:00:00Z"
             },
-            
-            "category":{
+
+            "category": {
                 "category_id": 1,
-                "name":"transfer",
+                "name": "transfer",
                 "description": "Money transfer transaction"
             },
 
             "tags": [
                 {
                     "tag_id": 1,
-                    "name": "urgent",
-                    "description": "Transactions that require immediate attention"
+                    "tag_name": "urgent"
                 },
                 {
                     "tag_id": 2,
-                    "name": "Mobile Money",
-                    "description": "Money transfer transaction"
+                    "tag_name": "Mobile Money"
                 }
             ],
 
             "system_logs": [
                 {
                     "log_id": 1,
-                    "transaction_id": 101,
-                    "log_message": "Transaction created successfully",
-                    "timestamp": "2026-05-14T10:00:00Z"
+                    "event_type": "transaction",
+                    "description": "Transaction created successfully",
+                    "log_time": "2026-05-14T10:00:00Z"
                 },
                 {
                     "log_id": 2,
-                    "transaction_id": 101,
-                    "log_message": "Transaction completed",
-                    "timestamp": "2026-05-14T10:05:00Z"
+                    "event_type": "transaction",
+                    "description": "Transaction completed",
+                    "log_time": "2026-05-14T10:05:00Z"
                 }
             ]
         }
     },
+
     {
         "transaction": {
-            "transaction_id":102,
-            "amount":75000,
-            "currency":"RWF",
+            "transaction_id": 102,
+            "amount": 75000,
+            "currency": "RWF",
             "transaction_date": "2026-05-15T11:00:00Z",
             "status": "pending",
             "description": "Payment for goods purchased",
@@ -72,53 +71,53 @@
                 "phone_number": "0789654321",
                 "created_at": "2026-05-15T11:00:00Z"
             },
-            "receiver":{
-                "user_id":6,
+
+            "receiver": {
+                "user_id": 6,
                 "full_name": "Joseph Oke",
                 "phone_number": "0795623967",
                 "created_at": "2026-05-15T11:00:00Z"
             },
-            
-            "category":{
+
+            "category": {
                 "category_id": 2,
-                "name":"payment",
+                "name": "payment",
                 "description": "Payment transaction"
             },
 
             "tags": [
                 {
                     "tag_id": 3,
-                    "name": "",
-                    "description": "Transactions with a high amount"
+                    "tag_name": "high amount"
                 },
                 {
                     "tag_id": 4,
-                    "name": "Online Shopping",
-                    "description": "Transactions related to online shopping"
+                    "tag_name": "Online orders"
                 }
             ],
 
             "system_logs": [
                 {
                     "log_id": 3,
-                    "transaction_id": 102,
-                    "log_message": "Transaction created successfully",
-                    "timestamp": "2026-05-15T11:00:00Z"
+                    "event_type": "transaction",
+                    "description": "Transaction created successfully",
+                    "log_time": "2026-05-15T11:00:00Z"
                 },
                 {
                     "log_id": 4,
-                    "transaction_id": 102,
-                    "log_message": "Transaction pending approval",
-                    "timestamp": "2026-05-15T11:30:00Z"
+                    "event_type": "transaction",
+                    "description": "Transaction pending approval",
+                    "log_time": "2026-05-15T11:30:00Z"
                 }
             ]
         }
     },
+
     {
         "transaction": {
             "transaction_id": 103,
-            "amount":25000,
-            "currency":"RWF",
+            "amount": 25000,
+            "currency": "RWF",
             "transaction_date": "2026-05-16T12:00:00Z",
             "status": "failed",
             "description": "Subscription payment transaction",
@@ -129,44 +128,43 @@
                 "phone_number": "0798765432",
                 "created_at": "2026-05-16T12:00:00Z"
             },
-            "receiver":{
-                "user_id":7,
+
+            "receiver": {
+                "user_id": 7,
                 "full_name": "Electricity Company",
                 "phone_number": "0781234567",
                 "created_at": "2026-05-16T12:00:00Z"
             },
-            
-            "category":{
+
+            "category": {
                 "category_id": 3,
-                "name":"subscription",
+                "name": "subscription",
                 "description": "Subscription payment transaction"
             },
 
             "tags": [
                 {
                     "tag_id": 5,
-                    "name": "recurring",
-                    "description": "Transactions that occur on a monthly  basis"
+                    "tag_name": "recurring"
                 },
                 {
                     "tag_id": 6,
-                    "name": "Service Payment",
-                    "description": "Transactions for service  payment"
+                    "tag_name": "Service Payment"
                 }
             ],
 
             "system_logs": [
                 {
                     "log_id": 5,
-                    "transaction_id": 103,
-                    "log_message": "Transaction created successfully",
-                    "timestamp": "2026-05-16T12:00:00Z"
+                    "event_type": "transaction",
+                    "description": "Transaction created successfully",
+                    "log_time": "2026-05-16T12:00:00Z"
                 },
                 {
                     "log_id": 6,
-                    "transaction_id": 103,
-                    "log_message": "Transaction failed due to insufficient funds",
-                    "timestamp": "2026-05-16T12:30:00Z"
+                    "event_type": "transaction",
+                    "description": "Transaction failed due to insufficient funds",
+                    "log_time": "2026-05-16T12:30:00Z"
                 }
             ]
         }
