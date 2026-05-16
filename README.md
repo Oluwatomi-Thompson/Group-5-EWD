@@ -147,7 +147,20 @@ Install MySQL Server:
 ```bash
 mysql -u root -p
 ```
+### SQL to JSON Mapping
 
+| SQL Table              | SQL Column       | JSON Key                  | Data Type        | Implementation Note             |
+| ---------------------- | ---------------- | ------------------------- | ---------------- | ------------------------------- |
+| Transactions           | transaction_id   | transaction_id            | Integer          | Primary Key mapping             |
+| Transactions           | amount           | amount                    | Decimal/Number   | Direct mapping                  |
+| Transactions           | transaction_date | transaction_date          | DATETIME/String  | ISO 8601 format                 |
+| Transactions           | status           | status                    | ENUM/String      | Normalized to lowercase in JSON |
+| Users                  | full_name        | sender / receiver.name    | Object/String    | Nested via FK                   |
+| Users                  | phone_number     | sender / receiver.phone   | String           | Nested via FK                   |
+| Transaction_Categories | name             | category.name             | Object/String    | Nested via FK                   |
+| Tags                   | tag_name         | tags[].name               | Array            | Many-to-many mapping            |
+| System_logs            | description      | system_logs[].log_message | Text/String      | Logged per transaction          |
+| System_logs            | log_time         | system_logs[].timestamp   | TIMESTAMP/String | ISO formatted                   |
 ---
 
 ### Execute the SQL Script
@@ -189,21 +202,6 @@ Each transaction includes:
 ### SQL to JSON Mapping
 ---
 
-| SQL Table              | SQL Column       | JSON Key                                    | Data Type        | Implementation Note               |
-| ---------------------- | ---------------- | ------------------------------------------- | ---------------- | --------------------------------- |
-| Transactions           | transaction_id   | transaction_id                              | Integer          | Primary key mapping               |
-| Transactions           | amount           | amount                                      | Decimal/Number   | Direct mapping                    |
-| Transactions           | transaction_date | transaction_date                            | DATETIME/String  | Serialized using ISO 8601 format  |
-| Transactions           | status           | status                                      | ENUM/String      | Serialized as string value        |
-| Users                  | full_name        | sender.full_name / receiver.full_name       | Object/String    | Nested through foreign keys       |
-| Users                  | phone_number     | sender.phone_number / receiver.phone_number | String           | Nested through foreign keys       |
-| Transaction_Categories | name             | category.name                               | Object/String    | Nested category object            |
-| Tags                   | tag_name         | tags[].tag_name                             | Array/String     | Many-to-many relationship mapping |
-| System_logs            | description      | system_logs[].description                   | Text/String      | Stored as nested log objects      |
-| System_logs            | log_time         | system_logs[].log_time                      | TIMESTAMP/String | Serialized using ISO 8601 format  |
-
-
---
 
 ## Notes on JSON vs SQL Design
 
