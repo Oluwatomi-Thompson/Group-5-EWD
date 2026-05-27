@@ -182,7 +182,8 @@ mysql> source database/database_setup.sql;
 
 ## Testing
 
-* CRUD operations tested successfully:
+* CRUD operations tested successfully
+Basic CRUD operations executed successfully (SELECT with joins, UPDATE description, DELETE label associations)
 
 ---
 

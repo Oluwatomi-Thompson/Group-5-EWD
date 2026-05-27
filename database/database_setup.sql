@@ -75,9 +75,9 @@ INSERT INTO Transaction_Categories (name, description) VALUES
 
 -- Seed Users
 INSERT INTO Users (full_name, phone_number) VALUES
-('John Doe', '+233241111111'),
-('Jane Smith', '+233242222222'),
-('Kofi Mensah', '+233243333333'),
+('John Thompson', '+233241111111'),
+('Jane Achol', '+233242222222'),
+('Lala Mensah', '+233243333333'),
 ('Ama Serwaa', '+233244444444'),
 ('Kwame Osei', '+233245555555');
 
