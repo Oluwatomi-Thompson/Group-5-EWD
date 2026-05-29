@@ -4,34 +4,29 @@
     "amount": 150.00,
     "transaction_date": "2026-05-10T10:15:00Z",
     "status": "Success",
-
     "sender": {
       "user_id": 1,
       "full_name": "John Thompson",
-      "phone_number": "+233241111111",
+      "phone_number": "+25079678435",
       "created_at": "2026-05-17T00:00:00Z"
     },
-
     "receiver": {
       "user_id": 2,
       "full_name": "Jane Achol",
-      "phone_number": "+233242222222",
+      "phone_number": "+25078543888",
       "created_at": "2026-05-17T00:00:00Z"
     },
-
     "category": {
       "category_id": 1,
       "name": "P2P Transfer",
       "description": "Direct mobile wallet transfer between two individual subscribers"
     },
-
     "tags": [
       {
         "tag_id": 4,
         "tag_name": "Business Expense"
       }
     ],
-
     "system_logs": [
       {
         "log_id": 1,
@@ -41,40 +36,34 @@
       }
     ]
   },
-
   {
     "transaction_id": 2,
     "amount": 45.50,
     "transaction_date": "2026-05-11T11:20:00Z",
     "status": "Success",
-
     "sender": {
       "user_id": 3,
       "full_name": "Lala Mensah",
-      "phone_number": "+233243333333",
+      "phone_number": "+25079999123",
       "created_at": "2026-05-17T00:00:00Z"
     },
-
     "receiver": {
       "user_id": 4,
       "full_name": "Ama Serwaa",
-      "phone_number": "+233244444444",
+      "phone_number": "+25078348882",
       "created_at": "2026-05-17T00:00:00Z"
     },
-
     "category": {
       "category_id": 2,
       "name": "Merchant Payment",
       "description": "Retail purchasing settlement at an authorized vendor POS"
     },
-
     "tags": [
       {
         "tag_id": 5,
         "tag_name": "Tax Exempt"
       }
     ],
-
     "system_logs": [
       {
         "log_id": 4,
@@ -84,40 +73,34 @@
       }
     ]
   },
-
   {
     "transaction_id": 3,
     "amount": 500.00,
     "transaction_date": "2026-05-12T14:05:00Z",
     "status": "Success",
-
     "sender": {
       "user_id": 5,
       "full_name": "Kwame Osei",
-      "phone_number": "+233245555555",
+      "phone_number": "+25079999349",
       "created_at": "2026-05-17T00:00:00Z"
     },
-
     "receiver": {
       "user_id": 1,
       "full_name": "John Thompson",
-      "phone_number": "+233241111111",
+      "phone_number": "+25079678435",
       "created_at": "2026-05-17T00:00:00Z"
     },
-
     "category": {
       "category_id": 3,
       "name": "Cash-In",
       "description": "Physical currency deposit into wallet via a registered agent booth"
     },
-
     "tags": [
       {
         "tag_id": 1,
         "tag_name": "High-Value"
       }
     ],
-
     "system_logs": [
       {
         "log_id": 1,
@@ -127,33 +110,28 @@
       }
     ]
   },
-
   {
     "transaction_id": 4,
     "amount": 100.00,
     "transaction_date": "2026-05-13T16:45:00Z",
     "status": "Failed",
-
     "sender": {
       "user_id": 2,
       "full_name": "Jane Achol",
-      "phone_number": "+233242222222",
+      "phone_number": "+25078809388",
       "created_at": "2026-05-17T00:00:00Z"
     },
-
     "receiver": {
       "user_id": 3,
       "full_name": "Lala Mensah",
-      "phone_number": "+233243333333",
+      "phone_number": "+25079998399",
       "created_at": "2026-05-17T00:00:00Z"
     },
-
     "category": {
       "category_id": 4,
       "name": "Cash-Out",
       "description": "Physical currency withdrawal from wallet executed at an agent booth"
     },
-
     "tags": [
       {
         "tag_id": 2,
@@ -164,7 +142,6 @@
         "tag_name": "Reversed"
       }
     ],
-
     "system_logs": [
       {
         "log_id": 2,
@@ -174,42 +151,77 @@
       }
     ]
   },
-
   {
     "transaction_id": 5,
     "amount": 85.20,
     "transaction_date": "2026-05-14T09:30:00Z",
     "status": "Pending",
-
     "sender": {
       "user_id": 4,
       "full_name": "Ama Serwaa",
-      "phone_number": "+233244444444",
+      "phone_number": "+25078886788",
       "created_at": "2026-05-17T00:00:00Z"
     },
-
     "receiver": {
       "user_id": 5,
       "full_name": "Kwame Osei",
-      "phone_number": "+233245555555",
+      "phone_number": "+25079999349",
       "created_at": "2026-05-17T00:00:00Z"
     },
-
     "category": {
       "category_id": 5,
       "name": "Utility Bill",
       "description": "Settlement of public utility accounts like electrical power, water, or internet"
     },
-
     "tags": [],
-
     "system_logs": [
       {
         "log_id": 5,
         "event_type": "CRON_CLEANUP",
         "description": "Successfully executed daily indexing and temporary log compression cycles.",
         "log_time": "2026-05-17T00:00:00Z"
-      }
-    ]
-  }
+      },
+      {
+        "transaction_schema": {
+          "transaction_id": "integer",
+          "amount": "float"},
+          "transaction_date": "YYYY-MM-DDTHH:MM:SSZ",
+          "status": "string",
+
+          "sender": {
+            "user_id": "integer",
+            "full_name": "string",
+            "phone_number": "string",
+            "created_at": "YYYY-MM-DDTHH:MM:SSZ"
+          },
+          "receiver": {
+            "user_id": "integer",
+            "full_name": "string",
+            "phone_number": "string",
+            "created_at": "YYYY-MM-DDTHH:MM:SSZ"
+          },
+          "category": {
+            "category_id": "integer",
+            "name": "string",
+            "description": "string"
+          },
+          "tags": [
+            {
+              "tag_id": "integer",
+              "tag_name": "string"
+            }
+          ],
+          "system_logs": [
+            {
+              "log_id": "integer",
+              "event_type": "string",
+              "description": "string",
+              "log_time": "YYYY-MM-DDTHH:MM:SSZ"
+            }
+          ]
+        }
+      ]
+    }
+  
 ]
+
