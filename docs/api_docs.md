@@ -115,14 +115,23 @@ The API successfully implements secure CRUD operations over XML data using Basic
 
 📄 API DOCUMENTATION
 Mobile Money SMS Transaction REST API
-INTRODUCTION
+
+1.INTRODUCTION
+
 2. BASE URL
+   
 3. AUTHENTICATION & SECURITY
-Authentication Method
-Valid Credentials
-2. DATA FORMAT
-2. API ENDPOINTS (CRUD OPERATIONS)/h1>
-6. DATA STRUCTURES & ALGORITHMS (DSA)
+   
+4.Authentication Method
+
+5.Valid Credentials
+
+6. DATA FORMAT
+   
+7. API ENDPOINTS (CRUD OPERATIONS)/h1>
+   
+8. DATA STRUCTURES & ALGORITHMS (DSA)
+9. 
 Linear Search
 Dictionary Lookup
 Comparison
