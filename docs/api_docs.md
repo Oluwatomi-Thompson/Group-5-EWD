@@ -9,7 +9,7 @@ The system is built using Python’s built-in http.server module and follows RES
 
 
 
-http://127.0.0.1:8000
+http://127.0.0.1:8000/transactions
 
 Server running
 image
@@ -33,11 +33,11 @@ XML Structure 1 send 5000 A B 2026-05-30
 
 Returns all transaction records from the XML file.
 
-Example Request curl.exe -u admin:momo2025 http://127.0.0.1:8000/transactions Example Response (200 OK) [ { "id": 1, "type": "send", "amount": 5000, "sender": "A", "receiver": "B", "timestamp": "2026-05-30" } ] Error Response (401 Unauthorized) { "error": "Unauthorized", "message": "Invalid or missing credentials" } 5.2 GET TRANSACTION BY ID Endpoint GET /transactions/{id} Description Returns a single transaction matching the given ID.
+Example Request [curl.exe -u admin:momo2025 http://127.0.0.1:8000/transactions](url) Example Response (200 OK) [ { "id": 1, "type": "send", "amount": 5000, "sender": "A", "receiver": "B", "timestamp": "2026-05-30" } ] Error Response (401 Unauthorized) { "error": "Unauthorized", "message": "Invalid or missing credentials" } 5.2 GET TRANSACTION BY ID Endpoint GET /transactions/{id} Description Returns a single transaction matching the given ID.
 
 Example Request
 
-curl.exe -u admin:momo2025 http://127.0.0.1:8000/transactions/1 image
+[curl.exe -u admin:momo2025 http://127.0.0.1:8000/transactions/1](url) image
 
 Response (200 OK) { "id": 1, "type": "send", "amount": 5000, "sender": "A", "receiver": "B" } Error (404 Not Found) { "error": "Not Found", "message": "Transaction does not exist" } 5.3 CREATE TRANSACTION (POST) Endpoint POST /transactions Description
 
