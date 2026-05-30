@@ -36,7 +36,9 @@ XML Structure 1 send 5000 A B 2026-05-30
 
 Returns all transaction records from the XML file.
 
-Example Request curl.exe -u admin:momo2025http://127.0.0.1:8000/transactions Example Response (200 OK) [ { "id": 1, "type": "send", "amount": 5000, "sender": "A", "receiver": "B", "timestamp": "2026-05-30" } ] Error Response (401 Unauthorized) { "error": "Unauthorized", "message": "Invalid or missing credentials" } 5.2 GET TRANSACTION BY ID Endpoint GET /transactions/{id} Description Returns a single transaction matching the given ID.
+Example Request 
+
+curl.exe -u admin:momo2025http://127.0.0.1:8000/transactions Example Response (200 OK) [ { "id": 1, "type": "send", "amount": 5000, "sender": "A", "receiver": "B", "timestamp": "2026-05-30" } ] Error Response (401 Unauthorized) { "error": "Unauthorized", "message": "Invalid or missing credentials" } 5.2 GET TRANSACTION BY ID Endpoint GET /transactions/{id} Description Returns a single transaction matching the given ID.
 
 Example Request
 
@@ -46,7 +48,9 @@ Response (200 OK) { "id": 1, "type": "send", "amount": 5000, "sender": "A", "rec
 
 Creates a new transaction and stores it in the XML file.
 
-Request Body { "type": "send", "amount": 7000, "sender": "A", "receiver": "B" } Example Request
+Request Body { "type": "send", "amount": 7000, "sender": "A", "receiver": "B" } 
+
+Example Request
 
 curl.exe -u admin:momo2025 -X POST http://127.0.0.1:8000/transactions -H "Content-Type: application/json" --data-binary "@payload.json" Success Response (201 Created)
 
@@ -69,7 +73,7 @@ Example Request curl.exe -u admin:momo2025 -X DELETE http://127.0.0.1:8000/trans
 image
 Error Response (404 Not Found) { "error": "Not Found", "message": "Transaction does not exist" }
 
-6. DATA STRUCTURES & ALGORITHMS (DSA)
+6.DATA STRUCTURES & ALGORITHMS (DSA)
 Linear Search
 Iterates through all transactions one by one
 Time Complexity: O(n)
@@ -84,6 +88,7 @@ TESTING
 The API was tested using:
 
 curl.exe
+
 Postman
 ✔ Test Cases Covered
 Successful GET with authentication
@@ -99,9 +104,11 @@ Unauthorized access error
 image
 
 COMMENT
+
 Dictionary lookup is significantly faster because it directly accesses data using keys instead of scanning all records.
 
 Improvement Suggestion
+
 Other efficient structures:
 
 Balanced Binary Search Trees (O(log n))
