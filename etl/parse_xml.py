@@ -1,19 +1,23 @@
 import xml.etree.ElementTree as ET
 import os
 
-def parse_sms_xml(file_path):
-    """Parses modified_sms_v2.xml and converts attributes into dictionaries."""
+def parse_sms_xml(file_path="data/modified_sms_v2.xml"):
+    """
+    Parses the modified_sms_v2.xml file from the data directory.
+    Correctly extracts transaction records stored as XML attributes.
+    """
     if not os.path.exists(file_path):
-        raise FileNotFoundError(f"File not found: {file_path}")
+        raise FileNotFoundError(f"The XML file was not found at: {file_path}")
         
     try:
         tree = ET.parse(file_path)
         root = tree.getroot()
     except ET.ParseError as e:
-        raise ValueError(f"Invalid XML syntax: {e}")
+        raise ValueError(f"Failed to parse invalid XML data: {e}")
 
     transactions = []
-
+    
+    # targets the sms elements and check their  attributes
     for sms in root.findall('sms'):
         tx_data = {
             "id": sms.get('id', '').strip(),
@@ -28,8 +32,9 @@ def parse_sms_xml(file_path):
     return transactions
 
 if __name__ == "__main__":
+    # Local verification block
     try:
-        data = parse_sms_xml("modified_sms_v2.xml")
-        print(f"Success! Parsed {len(data)} records.")
+        data = parse_sms_xml("data/modified_sms_v2.xml")
+        print(f"[SUCCESS] Parsed {len(data)} records cleanly from data folder.")
     except Exception as e:
-        print(f"Error: {e}")
+        print(f"[ERROR] Run failed: {e}")
